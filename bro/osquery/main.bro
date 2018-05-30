@@ -165,14 +165,22 @@ export {
     ## group: the group hosts should join.
     global set_host_group: function(range: subnet, group: string);
 
+    #TODO: unset_host_group
+
 ###
 ### Functions to update the framework
 ###
 
+    ## Checks the new ip address of the given host against the group collections and makes it to join respective groups.
     ##
+    ## host_id: the id of the host
+    ## ip: the new ip address of the host
     global send_joins_new_address: function(host_id: string, ip: addr): vector of string;
 
+    ## Checks the new group of the given host against the subscriptions and makes it to schedule respective queries.
     ##
+    ## host_id: the id of the host
+    ## group: the new group of the host
     global send_subscriptions_new_group: function(host_id: string, group: string);
 
 ###

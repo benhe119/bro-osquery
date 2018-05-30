@@ -44,7 +44,11 @@ event host_info_net(resultInfo: osquery::ResultInfo, interface: string, ip: stri
         # Update the interface
         osquery::host_interfaces::updateInterface(osquery::host_interfaces::REMOVE, host_id, interface, to_addr(ip), mac);
 
+        # Check for subscriptions to cancel
+        #TODO
+
         # Check for groups to leave
+        #TODO
     }
 
     # Log the change
